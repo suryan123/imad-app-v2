@@ -18,7 +18,7 @@ button.onclick=function(){
       
   };
   //Make a request
-  request.open('GET','http://manojduli.imad.hasura-app.io/counter',true);
+  request.open('GET','http://suryan123.imad.hasura-app.io/counter',true);
   request.open('GET','/counter',true);
   request.send(null);
   };
@@ -44,8 +44,14 @@ submit.onclick=function(){
 	};
      var nameInput=document.getElementById('name');
      var name=nameInput.value;
-	request.open('GET','http://manojduli.imad.hasura-app.io/submit-name?name='+name,true);
+	request.open('GET','http://suryan123.imad.hasura-app.io/submit-name?name='+name,true);
 	request.open('GET','/submit-one?name='+name,true);
 	request.send(null);
 
-}; 
+
+
+app.get('/home', function (req, res) {
+res.sendFile(path.join(__dirname, 'home.html'));
+});
+
+};
